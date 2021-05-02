@@ -17,7 +17,7 @@ class Hypotenuse(Resource):
                 'data': hypotenuse
             },200
         else:
-            return{
+            return {
                 'status': 422,
                 'data': 'Invalid parameters'
             },422
@@ -40,7 +40,7 @@ class Side(Resource):
                     'data': 'Hypotenuse can\'t be greater than side'
                 },200
         else:
-            return{
+            return {
                 'status': 422,
                 'data': 'Invalid parameters'
             },422
@@ -91,4 +91,4 @@ api.add_resource(Hypotenuse, '/hypotenuse')
 api.add_resource(Side, '/side')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(threaded=True, port=5000)
