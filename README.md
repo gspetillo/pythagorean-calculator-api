@@ -18,6 +18,7 @@
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
 [linkedin-url]: https://linkedin.com/in/gabrielpetillo
+[product-screenshot]: ./resources/app-print.png
 
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -33,7 +34,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/gspetillo/pythagorean-calculator-api">
-    <img src="./favicon-32x32.png" alt="Logo">
+    <img src="./resources/icons/favicon-32x32.png" alt="Logo">
   </a>
 
   <h3 align="center">Pythagorean Calculator API</h3>
@@ -92,6 +93,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+![Product Name Screen Shot][product-screenshot]
 
 Development of a Pythagorean Theorem Calculator Flask Web Service for a job interview test.
 
