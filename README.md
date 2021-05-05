@@ -1,24 +1,23 @@
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/gspetillo/pythagorean-calculator.svg?style=for-the-badge
-[contributors-url]: https://github.com/gspetillo/pythagorean-calculator/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/gspetillo/pythagorean-calculator-api.svg?style=for-the-badge
+[contributors-url]: https://github.com/gspetillo/pythagorean-calculator-api/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/gspetillo/pythagorean-calculator.svg?style=for-the-badge
-[forks-url]: https://github.com/gspetillo/pythagorean-calculator/network/members
+[forks-shield]: https://img.shields.io/github/forks/gspetillo/pythagorean-calculator-api.svg?style=for-the-badge
+[forks-url]: https://github.com/gspetillo/pythagorean-calculator-api/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/gspetillo/pythagorean-calculator.svg?style=for-the-badge
-[stars-url]: https://github.com/gspetillo/pythagorean-calculator/stargazers
+[stars-shield]: https://img.shields.io/github/stars/gspetillo/pythagorean-calculator-api.svg?style=for-the-badge
+[stars-url]: https://github.com/gspetillo/pythagorean-calculator-api/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/gspetillo/pythagorean-calculator.svg?style=for-the-badge
-[issues-url]: https://github.com/gspetillo/pythagorean-calculator/issues
+[issues-shield]: https://img.shields.io/github/issues/gspetillo/pythagorean-calculator-api.svg?style=for-the-badge
+[issues-url]: https://github.com/gspetillo/pythagorean-calculator-api/issues
 
-[license-shield]: https://img.shields.io/github/license/gspetillo/pythagorean-calculator.svg?style=for-the-badge
-[license-url]: https://github.com/gspetillo/pythagorean-calculator/blob/master/LICENSE
+[license-shield]: https://img.shields.io/github/license/gspetillo/pythagorean-calculator-api.svg?style=for-the-badge
+[license-url]: https://github.com/gspetillo/pythagorean-calculator-api/blob/master/LICENSE
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
 [linkedin-url]: https://linkedin.com/in/gabrielpetillo
-[product-screenshot]: /resources/images/app-print.png
 
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -33,23 +32,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/gspetillo/pythagorean-calculator">
-    <img src="./resources/images/icons/favicon-32x32.png" alt="Logo">
+  <a href="https://github.com/gspetillo/pythagorean-calculator-api">
+    <img src="./favicon-32x32.png" alt="Logo">
   </a>
 
-  <h3 align="center">Pythagorean Calculator</h3>
+  <h3 align="center">Pythagorean Calculator API</h3>
 
   <p align="center">
-    Simple Pythagorean Theorem Calculator Website
+    Pythagorean Theorem Calculator Flask Web Service
     <br />
-    <a href="https://github.com/gspetillo/pythagorean-calculator"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/gspetillo/pythagorean-calculator-api"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://pythagorean-calculator.vercel.app/">View Demo</a>
+    <a href="https://github.com/gspetillo/pythagorean-calculator-api/issues">Report Bug</a>
     ·
-    <a href="https://github.com/gspetillo/pythagorean-calculator/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/gspetillo/pythagorean-calculator/issues">Request Feature</a>
+    <a href="https://github.com/gspetillo/pythagorean-calculator-api/issues">Request Feature</a>
   </p>
 </p>
 
@@ -73,7 +70,17 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#theory">Theory</a></li>
+        <li><a href="#routes">Routes</a>
+          <ul>
+            <li><a href="#hypotenuse">Hypotenuse</a></li>
+            <li><a href="#side">Side</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -86,29 +93,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://pythagorean-calculator.vercel.app/)
-
-Development of a simple calculator website for a job interview test.
+Development of a Pythagorean Theorem Calculator Flask Web Service for a job interview test.
 
 The main features of this application are:
 * Calculation of the hypotenuse from the two sides;
 * Calculation of the side from the hypotenuse and the other side;
-* Button to copy the result to the device's clipboard;
-* Button to clear form fields;
 
 
 ### Built With
 
 The main technologies used for the development of this project are:
 
-* [Vue.js](https://vuejs.org/)
-* [Bootstrap](https://getbootstrap.com)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [Flask Restful](https://flask-restful.readthedocs.io/en/latest/)
 
 ### Related Repositories
 
 Other repositories related to the development of this project:
 
-* [pythagorean-calculator-api](https://github.com/gspetillo/pythagorean-calculator-api)
+* [pythagorean-calculator](https://github.com/gspetillo/pythagorean-calculator)
 * [pythagorean-calculator-desktop](https://github.com/gspetillo/pythagorean-calculator-desktop)
 
 
@@ -120,25 +123,45 @@ To clone and run this project locally, follow these simple example steps:
 
 ### Prerequisites
 
-There are no specific prerequisites for the execution of this project
+To run this project, you need to install:
+
+* [Python](https://www.python.org/downloads/)
+
+After that, install the following `requirements.txt`:
+```
+Flask==1.1.2
+flask_restful==0.3.8 
+Click==7.0
+gunicorn==19.9.0
+itsdangerous==1.1.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+Werkzeug==0.15.6
+```
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/gspetillo/pythagorean-calculator.git
+   git clone https://github.com/gspetillo/pythagorean-calculator-api.git
    ```
-3. Run the index.html file at the root of the project directory
+2. Run the <span>main.py</span> file at the root of the project directory
    ```sh
-   start ./index.html
+   python main.py
    ```
+3. Access the local IP address generated by the web service (example using the default IP and port)
+    ```sh
+    start http://127.0.0.1:5000/
+    ```
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This website can be used to perform simple calculations involving the Pythagorean theorem. The main formulas of this theorem used in this project are:
+### Theory
+
+This wb service can be used to perform simple calculations involving the Pythagorean theorem. The main formulas of this theorem used in this project are:
 
 <img src="https://uploads-cdn.omnicalculator.com/images/geometry/area/right-triangle.svg">
 <br><br>
@@ -149,7 +172,46 @@ This website can be used to perform simple calculations involving the Pythagorea
 
 _For examples, please acess [Khan Academy](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-geometry/cc-8th-pythagorean-theorem/v/the-pythagorean-theorem#:~:text=The%20Pythagorean%20theorem%20consists%20of%20a%20formula%20a%5E2%2Bb,triangle%20(Opposite%20and%20Adjacent).)_.
 
+### Routes
 
+To access the web service data, use the routes as shown below. The examples use the default IP and port when starting the service.
+
+
+#### Hypotenuse: 
+`/hypotenuse`
+
+Returns the result of the hypotenuse calculation using `sideA` and `sideB` passed as a parameter. 
+
++ Request:
+
+  ```py
+  http://127.0.0.1:5000/hypotenuse?sideA=3.0&sideB=4.0
+  ```
+
+* Response: 
+  ```js
+  {
+  "status": 200,
+  "data": 5
+  }
+  ```
+#### Side: 
+`/side`
+
+Returns the result of the side calculation using the `hypotenuse` and the `side` passed as a parameter
+
+* Request
+  ```py
+  http://127.0.0.1:5000/side?hypotenuse=5.0&side=4.0
+  ```
+
+* Response: 
+  ```js
+  {
+  "status": 200,
+  "data": 3
+  }
+  ```
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -158,7 +220,7 @@ Contributions are what make the open source community such an amazing place to b
 
 1. Fork the Project _(Fork button on Github)_
 ```sh
-start https://github.com/gspetillo/pythagorean-calculator
+start https://github.com/gspetillo/pythagorean-calculator-api
 ```
 2. Create your Feature Branch 
 ```sh
@@ -175,7 +237,7 @@ git push origin feature/AmazingFeature
 5. Open a Pull Request _(Pull Request page on Github)_
 
 ```sh
-start https://github.com/gspetillo/pythagorean-calculator/pulls
+start https://github.com/gspetillo/pythagorean-calculator-api/pulls
 ```
 
 <!-- LICENSE -->
@@ -190,16 +252,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Gabriel Petillo - [Linkedin](https://www.linkedin.com/in/gabrielpetillo) - [Github](https://github.com/gspetillo/) - [Medium](https://medium.com/@gspetillo) - [Email](gspetillo@gmail.com)
 
-Project Link: [https://github.com/gspetillo/pythagorean-calculator](https://github.com/gspetillo/pythagorean-calculator)
+Project Link: [https://github.com/gspetillo/pythagorean-calculator-api](https://github.com/gspetillo/pythagorean-calculator-api)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-* [Sweet Alert](https://sweetalert.js.org/guides/)
-* [Bootstrap Icons](https://icons.getbootstrap.com/)
-* [Favicon Generator](https://www.favicon-generator.org/)
+* [Postman](https://www.postman.com/)
 
 
 
